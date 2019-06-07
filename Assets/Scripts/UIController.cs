@@ -10,7 +10,6 @@ public class UIController : MonoBehaviour {
 
 	void Start() {
 		if (sceneStack == null) {
-			print("instanciado");
 			sceneStack = new List<string>();
 		}
 	}
