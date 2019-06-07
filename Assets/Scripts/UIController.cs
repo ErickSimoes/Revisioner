@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour {
 
-	[SerializeField]
-	public static List<string> sceneStack;
+	private static List<string> sceneStack;
 
 	void Start() {
 		if (sceneStack == null) {
