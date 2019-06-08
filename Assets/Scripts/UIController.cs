@@ -7,7 +7,8 @@ public class UIController : MonoBehaviour {
 
 	public enum Subjects {
 		Geo_earth,
-		Geo_mountain
+		Geo_mountain,
+		Bio_bacterium
 	}
 	
 	private static List<string> sceneStack;
