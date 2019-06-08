@@ -5,18 +5,39 @@ using UnityEngine.SceneManagement;
 
 public class UIController : MonoBehaviour {
 
+	public enum Subjects {
+		Geo_earth,
+		Geo_mountain
+	}
+	
 	private static List<string> sceneStack;
+	private static GameObject Subject;
+
+	public Subjects subject;
+
+	void Awake() {
+		if (!Subject) {
+			Subject = GameObject.FindGameObjectWithTag("Subject");
+		}
+	}
 
 	void Start() {
+		
 		if (sceneStack == null) {
 			sceneStack = new List<string>();
 		}
 	}
 
-
 	public void GoToScene(string scene) {
+		//TODO: check if name scene is empty
 		sceneStack.Add(SceneManager.GetActiveScene().name);
 		SceneManager.LoadScene(scene);
+	}
+
+	public void GoToARScene() {
+		Subject.GetComponent<ARSubjectController>().subject = subject;
+		
+		SceneManager.LoadScene("ARScene");
 	}
 
 	public void BackToPreviousScene() {
