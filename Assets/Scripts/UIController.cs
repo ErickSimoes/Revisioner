@@ -28,6 +28,12 @@ public class UIController : MonoBehaviour {
 		}
 	}
 
+	void Update() {
+		if (Input.GetKey(KeyCode.Escape)) {
+			BackToPreviousScene();
+		}
+	}
+
 	public void GoToScene(string scene) {
 		//TODO: check if name scene is empty
 		sceneStack.Add(SceneManager.GetActiveScene().name);
@@ -36,8 +42,7 @@ public class UIController : MonoBehaviour {
 
 	public void GoToARScene() {
 		Subject.GetComponent<ARSubjectController>().subject = subject;
-		
-		SceneManager.LoadScene("ARScene");
+		GoToScene("ARScene");
 	}
 
 	public void BackToPreviousScene() {
