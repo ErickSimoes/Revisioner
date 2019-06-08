@@ -21,6 +21,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Subjects/Geography.unity
     guid: b217677a59aae8045a9eb7efa19e1d73
   - enabled: 1
+    path: Assets/Scenes/Subjects/Biology.unity
+    guid: 4ad6fc453fca0da40b950992c86af419
+  - enabled: 1
+    path: Assets/Scenes/Subjects/Chemistry.unity
+    guid: 3d1f8c6fa66a8da44a9036123adadbce
+  - enabled: 1
     path: Assets/Scenes/ARScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
