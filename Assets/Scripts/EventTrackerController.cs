@@ -31,6 +31,12 @@ public class EventTrackerController : MonoBehaviour, ITrackableEventHandler {
 		}
 
 		subject = Subject.GetComponent<ARSubjectController>().subject;
+
+		foreach (Prefabs prefab in prefabs) {
+			if (prefab.subject == subject) {
+				Instantiate(prefab.prefab, this.gameObject.transform);
+			}
+		}
 		
 	}
 
