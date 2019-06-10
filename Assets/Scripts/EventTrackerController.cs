@@ -7,8 +7,7 @@ public class EventTrackerController : MonoBehaviour {
 	
 	private static GameObject Subject;
 	private UIController.Subjects subject;
-	[NonSerialized]
-	public int numero;
+	
 	[Serializable]
 	public struct Prefabs {
 		public UIController.Subjects subject;
